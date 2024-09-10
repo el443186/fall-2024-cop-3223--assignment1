@@ -1,0 +1,55 @@
+#include <stdio.h>
+int main(int arge, char **argv)
+{
+  calculateDistance();
+  calculatePerimeter();
+  calculateArea();
+  calculateWidth();
+  calculateHeight();
+
+return 0;
+}
+double calculateDistance()
+{
+  double d1=0;
+  double d2=0;
+  double distance=0;
+  double x1,x2,y1,y2
+  printf ("What is X1?");
+  scanf("%lf", &x1);
+  printf("X1",&x1); 
+
+  printf ("What is Y1?");
+  scanf("%lf", &y1);
+  printf("Y1",&y1); 
+
+  printf ("What is X2?");
+  scanf("%lf", &x2);
+  printf("X2",&x2); 
+
+  printf ("What is Y2?");
+  scanf("%lf", &y2);
+  printf("Y2",&y2); 
+
+  d1=x2-x1;
+  d2=y1-y2;
+  distance=sqrt((d1*d1)+(d2*d2));
+return distance;
+
+double calculatePerimeter;
+{
+  double length,width;
+  double peri=0;
+  double difficulty=0
+
+  printf ("What is length?");
+  scanf("%lf", &length);
+  printf("length",&length); 
+
+  printf ("What is width?");
+  scanf("%lf", &width);
+  printf("width",&width); 
+
+  printf("What would you rate this on a scale of 1.0(easiest) to 5.0(hardest)?");
+  scanf("%lf", &difficulty);
+  printf("difficulty",&difficulty);
