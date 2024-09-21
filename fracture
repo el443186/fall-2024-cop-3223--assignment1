@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <math.h>
+#define PI 3.14159
 
     double calculateDistance();
     double calculatePerimeter();
     double calculateArea();
     double calculateWidth();
     double calculateHeight();
-    
+    double difficulty;
 int main(int arge, char **argv)
 {
-    double distance= calculateDistance();
-    printf("Distance: %lf\n", distance);
-  
-    double perimeter = calculatePerimeter();
-    printf("Perimeter: %lf\n", perimeter);
-
+    calculateDistance();
+    calculatePerimeter();
+    calculateArea();
+    calculateWidth();
+    calculateHeight();
 return 0;
 }
 double calculateDistance()
@@ -23,46 +23,95 @@ double calculateDistance()
   double d2=0;
   double distance=0;
   double x1, x2,y1,y2;
-  
-  printf ("What is X1?");
+  double difficulty=2;
+  printf ("What is X1?\n");
   scanf("%lf", &x1);
 
-  printf ("What is Y1?");
+  printf ("What is Y1?\n");
   scanf("%lf", &y1);
 
-  printf ("What is X2?");
+  printf ("What is X2?\n");
   scanf("%lf", &x2);
   
-  printf ("What is Y2?");
+  printf ("What is Y2?\n");
   scanf("%lf", &y2);
   
-  printf("Point #1 entered: x1 = %.2lf; y1 = %.2lf\n", x1, y1);
-  printf("Point #2 entered: x2 = %.2lf; y2 = %.2lf\n", x2, y2);
+  printf("Point #1 entered: x1 = %.2lf; y1 = %.2f\n", x1, y1);
+  printf("Point #2 entered: x2 = %.2lf; y2 = %.2f\n", x2, y2);
   
 
   d1=x2-x1;
   d2=y2-y1;
   distance=sqrt((d1 * d1) + (d2 * d2));
 
-return distance;
-}
-double calculatePerimeter()
-{
-  double length,width;
-  double peri=0;
-  double difficulty=0;
-
-  printf ("What is length?");
-  scanf("%lf", &length);
-  
-  printf ("What is width?");
-  scanf("%lf", &width);
-
-  printf("What would you rate this on a scale of 1.0(easiest) to 5.0(hardest)?");
-  scanf("%lf", &difficulty);
-  
-  peri=2*(width+length);
-
+  printf("The distance between the two points is %.2f\n", distance);
 return difficulty;
 }
 
+double calculatePerimeter()
+{
+  double width = calculateWidth(); 
+  double height = calculateHeight();
+  double perimeter= 2*(height+width);
+  double difficulty=4;
+
+  printf ("Width entered:%.2f\n",width);
+  printf ("Height entered:%.2f\n", height);
+  printf("The perimeter of the city is:%.2f\n",perimeter);
+
+  
+return difficulty;
+}
+
+double calculateArea()
+{
+
+    double difficulty=3;
+    double area=0;
+    double width = calculateWidth(); 
+    double height = calculateHeight();
+    
+    
+    area=width*height;
+    printf ("Width entered:%.2f\n", width);
+    printf ("Height entered:%.2f\n", height);
+    printf("The area of the city is:%.2f\n", area);
+
+return difficulty;
+}
+double calculateWidth()
+{
+    double x1,x2;
+    double width=0;
+    double difficulty=2;
+   
+    printf("What is X1?\n");
+    scanf("%lf",&x1);
+    
+    printf("What is X2?\n");
+    scanf("%lf",&x2);
+
+    
+    width=x2-x1;
+    printf ("Width entered:%.2f\n", width);
+    
+return difficulty;
+    
+}
+double calculateHeight()
+{
+    double y1,y2;
+    double height=0;
+    double difficulty=2;
+    
+    printf("What is Y1?\n");
+    scanf("%lf",& y1);
+    
+    printf("What is Y2?\n");
+    scanf("%lf",& y2);
+    height=y2-y1;
+    printf ("Height entered:%.2f\n", height);
+    
+    
+ return difficulty;  
+}
