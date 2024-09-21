@@ -5,7 +5,7 @@
     double calculateDistance(); 
     double calculatePerimeter(); 
     double calculateArea();
-    double calculateWidth();
+    double calculateWidth(); 
     double calculateHeight();
     double difficulty;
 int main(int arge, char **argv)
